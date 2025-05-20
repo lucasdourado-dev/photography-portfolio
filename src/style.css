@@ -1,0 +1,231 @@
+@font-face {
+    font-family: StretchPro;
+    src: url(fonts/StretchPro.otf) format('opentype');
+}
+
+@font-face {
+    font-family: Archivo;
+    src: url(fonts/Archivo-VariableFont_wdth\,wght.ttf) format('truetype');
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+}
+
+#main-section {
+    height: 100vh;
+    color: #010101;
+    background-image: url(../images/shots/home/background-teste.jpg);
+    background-size: cover;
+    background-position-y: 80%;
+    background-position-x: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90vw;
+    height: 10vh;
+
+}
+
+a {
+    text-decoration: none;
+    font-family: Archivo, sans-serif;
+    color: #171717;
+    position: relative; /*para o pseudo-elemento*/
+    transition: all 0.25s ease;
+}
+
+#portfolio {
+    color: #c39e6cff;
+}
+
+#portfolio::after {
+    content: ''; /*necessário*/
+    position: absolute; /*vai se basear no link*/
+    left: 0;
+    bottom: -5px; /*ou padding-bottom no link*/
+    width: 100%;
+    height: 1px;
+    transform: scaleX(1); /*inicialmente invisível*/
+    background-color: #c39e6cff;
+}
+
+.links:hover {
+    color: #c39e6cff;
+}
+
+/*aqui efetivamente irei criar a linha*/
+.links::after { /*pseudo-elemento; permite inserir conteúdo extra*/
+    content: ''; /*necessário*/
+    position: absolute; /*vai se basear no link*/
+    left: 0;
+    bottom: -5px; /*ou padding-bottom no link*/
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0); /*inicialmente invisível*/
+    background-color: #c39e6cff;
+    transition: transform 0.25s ease;
+}
+
+/*aqui eu vou fazer a linha aparecer quando o mouse estiver por cima*/
+.links:hover::after {
+    transform: scaleX(1);
+}
+
+
+#dourado { 
+    font-family: StretchPro;
+    color: #c39e6cff;
+    font-size: clamp(2rem, 5vw, 3rem); /*valor mínimo, ideal e máximo*/
+    text-align: center;
+    margin-top: 5vh;
+    transition: all 0.5s ease-in-out;
+    animation: slideUpFadeIn 1s ease-in-out forwards;
+}
+
+#dourado:hover {
+    letter-spacing: 0.1rem;
+}
+
+@keyframes slideUpFadeIn { /*entender como funciona*/
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#dourado:hover { /*tentar fazer cor invertida do fundo*/
+    cursor: pointer;
+    color: #171717;
+}
+
+#intermediate {
+    height: 40vh;
+    background-image: url(../images/shots/home/intermediate-img.JPG);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#sections { /*mexendo na sessão*/
+    background-color: #0A0A0A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 20px 20px;
+}
+
+#sections-title {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-family: StretchPro;
+    color: #c39e6cff;
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-align: center;
+    cursor: pointer;
+}
+
+#blocks { /*mexendo na div dos blocos*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.block { /*mexendo nos blocos de modo geral (nos links)*/
+    font-family: Archivo, sans-serif;
+    color: #FAFAFA;
+    font-weight: normal;
+    font-size: larger;
+    background-color: #c39e6cff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vw;
+    width: 25vw;
+    min-height: 200px;
+    min-width: 250px;
+    border-radius: 10px;
+    margin: 20px;
+    transition: all 0.25s ease-in-out;
+}
+
+
+#outside{
+    background-image: url(../images/shots/home/outside-block.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#outside:hover {
+    background-image: none;
+}
+
+#church {
+    background-image: url(../images/shots/home/church-block.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 45%;
+}
+
+#church:hover {
+    background-image: none;
+}
+
+#editing {
+    background-image: url(../images/shots/home/tap-to-edit-block.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-x: 30%;
+}
+
+#editing:hover {
+    background-image: none;
+}
+
+.block:hover {
+    background-image: none;
+    background-color: #171717;
+    color: #c39e6cff;
+    box-shadow: 0px 0px 10px #c39e6cff;
+    letter-spacing: 0.1em;
+}
+
+footer {
+    background-color: black;
+    font-family: Archivo, sans-serif;
+    font-weight: normal;
+    color: #c39e6cff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
