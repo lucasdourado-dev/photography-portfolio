@@ -231,3 +231,9 @@ footer {
     align-items: center;
     height: 10vh;
 }
+
+@media (max-width: 768px) {
+    #intermediate {
+        background-attachment: scroll;
+    }
+}
