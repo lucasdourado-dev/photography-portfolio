@@ -28,9 +28,9 @@ body {
 #main-section {
     height: 100vh;
     color: #010101;
-    background-image: url(../images/shots/home/background-teste.jpg);
+    background-image: url(../images/shots/home/background.jpg);
     background-size: cover;
-    background-position-y: 80%;
+    background-position-y: 45%;
     background-position-x: center;
     display: flex;
     flex-direction: column;
@@ -92,18 +92,20 @@ a {
 }
 
 
-#dourado { 
+#title { 
     font-family: StretchPro;
     color: #c39e6cff;
     font-size: clamp(2rem, 5vw, 3rem); /*valor mínimo, ideal e máximo*/
     text-align: center;
     margin-top: 5vh;
+    cursor: default;
     transition: all 0.5s ease-in-out;
     animation: slideUpFadeIn 1s ease-in-out forwards;
 }
 
-#dourado:hover {
+#title:hover {
     letter-spacing: 0.1rem;
+    color: #171717;
 }
 
 @keyframes slideUpFadeIn { /*entender como funciona*/
@@ -117,7 +119,7 @@ a {
     }
 }
 
-#dourado:hover { /*tentar fazer cor invertida do fundo*/
+title:hover { /*tentar fazer cor invertida do fundo*/
     cursor: pointer;
     color: #171717;
 }
