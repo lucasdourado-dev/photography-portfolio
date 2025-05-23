@@ -237,3 +237,9 @@ footer {
         background-attachment: scroll;
     }
 }
+
+@media (max-width: 400px){
+    #main-section {
+        background-image: url(../images/shots/home/background-mobile.jpg);
+    }
+}
