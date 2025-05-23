@@ -120,7 +120,7 @@ a {
 }
 
 #about-content #about-image img{
-    max-width: 70vw;
+    max-width: 300px;
     animation: slideUpFadeIn 1s ease-in-out forwards;
 }
 
