@@ -232,14 +232,12 @@ footer {
     height: 10vh;
 }
 
-@media (max-width: 768px) {
-    #intermediate {
-        background-attachment: scroll;
-    }
-}
-
-@media (max-width: 400px){
+@media (max-width: 400px) {
     #main-section {
         background-image: url(../images/shots/home/background-mobile.jpg);
+    }
+    
+    #intermediate {
+        background-attachment: scroll;
     }
 }
