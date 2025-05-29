@@ -59,8 +59,9 @@ a {
     bottom: -5px; /*ou padding-bottom no link*/
     width: 100%;
     height: 1px;
-    transform: scaleX(1); /*inicialmente invisível*/
     background-color: #c39e6cff;
+    transform-origin: left;
+    transform: scaleX(1); /*inicialmente invisível*/
 }
 
 .links:hover {
@@ -75,8 +76,9 @@ a {
     bottom: -5px; /*ou padding-bottom no link*/
     width: 100%;
     height: 1px;
-    transform: scaleX(0); /*inicialmente invisível*/
     background-color: #c39e6cff;
+    transform: scaleX(0); /*inicialmente invisível*/
+    transform-origin: left;
     transition: transform 0.25s ease;
 }
 
