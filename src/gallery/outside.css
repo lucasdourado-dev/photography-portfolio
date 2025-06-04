@@ -1,0 +1,170 @@
+@font-face {
+    font-family: StretchPro;
+    src: url(/src/fonts/StretchPro.otf) format('opentype');
+}
+
+@font-face {
+    font-family: Archivo;
+    src: url(/src/fonts/Archivo-VariableFont_wdth\,wght.ttf) format('truetype');
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+}
+
+
+#main-section {
+    background-color: #171717;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 0 20px 20px;
+}
+
+#title {
+    font-family: StretchPro, sans-serif;
+    color: #c39e6cff;
+    display: flex;
+    flex-wrap: wrap; /*para o responsivo*/
+    justify-content: center;
+    text-align: justify;
+    text-align-last: center;
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin: 5vh 10vw 0 10vw;
+    animation: slideUpFadeIn 1s ease-in-out forwards;
+    cursor: default;
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+}
+
+
+#nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90vw;
+    height: 10vh;
+
+}
+
+a {
+    text-decoration: none;
+    font-family: Archivo, sans-serif;
+    color: white;
+    position: relative; /*para o pseudo-elemento*/
+    transition: all 0.25s ease;
+}
+
+
+#portfolio::after {
+    content: ''; /*necessário*/
+    position: absolute; /*vai se basear no link*/
+    left: 0;
+    bottom: -5px; /*ou padding-bottom no link*/
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0); /*inicialmente invisível*/
+    background-color: #c39e6cff;
+    transition: transform 0.25s ease;
+
+}
+
+.links:hover {
+    color: #c39e6cff;
+}
+
+#portfolio:hover::after {
+    transform: scaleX(1);
+}
+
+/*aqui efetivamente irei criar a linha*/
+#contact::after { /*pseudo-elemento; permite inserir conteúdo extra*/
+    content: ''; /*necessário*/
+    position: absolute; /*vai se basear no link*/
+    left: 0;
+    bottom: -5px; /*ou padding-bottom no link*/
+    width: 100%;
+    height: 1px;
+    background-color: #c39e6cff;
+    transform: scaleX(0); /*inicialmente invisível*/
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+/*aqui eu vou fazer a linha aparecer quando o mouse estiver por cima*/
+#contact:hover::after {
+    transform: scaleX(1);
+}
+
+#project::after { /*pseudo-elemento; permite inserir conteúdo extra*/
+    content: ''; /*necessário*/
+    position: absolute; /*vai se basear no link*/
+    left: 0;
+    bottom: -5px; /*ou padding-bottom no link*/
+    width: 100%;
+    height: 1px;
+    background-color: #c39e6cff;
+    transform: scaleX(0); /*inicialmente invisível*/
+    transform-origin: right;
+    transition: transform 0.25s ease;
+}
+
+/*aqui eu vou fazer a linha aparecer quando o mouse estiver por cima*/
+#project:hover::after {
+    transform: scaleX(1);
+}
+
+#gallery {
+    padding-top: 10vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px;
+    justify-items: center; /*centraliza os itens na grid*/
+}
+
+#gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin: 10px;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+footer {
+    background-color: black;
+    font-family: Archivo, sans-serif;
+    font-weight: normal;
+    color: #c39e6cff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
