@@ -142,20 +142,14 @@ a {
 }
 
 #gallery {
+    max-width: 70vw;
     padding-top: 10vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 10px;
-    justify-items: center; /*centraliza os itens na grid*/
+    columns: 300px;
 }
 
 #gallery img {
     width: 100%;
-    height: auto;
-    object-fit: contain;
-    margin: 10px;
-    transition: transform 0.3s ease;
-    display: block;
+    margin-bottom: 1em;
 }
 
 footer {
@@ -167,4 +161,15 @@ footer {
     justify-content: center;
     align-items: center;
     height: 10vh;
+}
+
+@keyframes slideUpFadeIn { /*entender como funciona*/
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

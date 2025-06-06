@@ -133,20 +133,11 @@ a {
     color: #c39e6cff;
     letter-spacing: 0.1em;
     transition: all 0.5s ease-in-out;
-    animation: slideUpFadeIn 1s ease-in-out forwards;
+    animation: slideUpFadeIn ease-in-out forwards;
+    animation-timeline: view();
     cursor: default;
 }
 
-@keyframes slideUpFadeIn { /*entender como funciona*/
-    0% {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
 
 title:hover { /*tentar fazer cor invertida do fundo*/
     cursor: pointer;
@@ -177,6 +168,9 @@ title:hover { /*tentar fazer cor invertida do fundo*/
     font-size: clamp(2rem, 5vw, 3rem);
     text-align: center;
     cursor: pointer;
+    animation: slideUpFadeIn ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
 }
 
 #blocks { /*mexendo na div dos blocos*/
@@ -185,13 +179,15 @@ title:hover { /*tentar fazer cor invertida do fundo*/
     justify-content: space-around;
     align-items: center;
     margin-bottom: 60px;
+    animation: slideUpFadeIn ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
 }
 
 .block { /*mexendo nos blocos de modo geral (nos links)*/
     font-family: Archivo, sans-serif;
     color: #FAFAFA;
-    font-weight: normal;
-    font-size: larger;
+    font-size: clamp(1.2rem, 5vw, 1.8rem); 
     background-color: #c39e6cff;
     display: flex;
     justify-content: center;
@@ -255,7 +251,6 @@ title:hover { /*tentar fazer cor invertida do fundo*/
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 0 0 20px 20px;
     padding-bottom: 80px;
 }
 
@@ -269,8 +264,10 @@ title:hover { /*tentar fazer cor invertida do fundo*/
     text-align-last: center;
     font-size: clamp(2rem, 5vw, 3rem);
     margin: 0px 10vw 0 10vw;
-    animation: slideUpFadeIn 1s ease-in-out forwards;
     cursor: default;
+    animation: slideUpFadeIn ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
 }
 
 #about-content {
@@ -284,14 +281,19 @@ title:hover { /*tentar fazer cor invertida do fundo*/
     margin-top: 10vh;
     width: 70vw;
     font-family: Archivo, sans-serif;
+    font-size: clamp(1.2rem, 5vw, 1.8rem); /*valor min, ideal e máximo*/
     color: white;
     display: flex;
     flex-wrap: wrap; /*para o responsivo*/
     justify-content: center;
-    text-align: justify;
-    font-size: clamp(1rem, 1vw, 1.5rem);
-    animation: slideUpFadeIn 1s ease-in-out forwards;
 }
+
+#about-content #about-text p {
+    animation: slideUpFadeIn ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+}
+
 
 #keep-in-touch {
     background-color: #0A0A0A;
@@ -309,27 +311,21 @@ title:hover { /*tentar fazer cor invertida do fundo*/
     display: flex;
     flex-wrap: wrap; /*para o responsivo*/
     justify-content: center;
-    text-align: justify;
-    text-align-last: center;
     font-size: clamp(2rem, 5vw, 3rem);
-    animation: slideUpFadeIn 1s ease-in-out forwards;
     cursor: default;
+    animation: slideUpFadeIn ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
 }
 
-.nowrap {
-    white-space: nowrap; /*impede a quebra de linha*/
-    margin-left: 0.5em;
+#keep-in-touch-tile span {
+    margin-left: 0.25em;
+    margin-right: 0.25em;
 }
 
-@keyframes slideUpFadeIn { /*entender como funciona*/
-    0% {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+span {
+    margin-left: 0.25em;
+    margin-right: 0.25em;
 }
 
 #contacts {
@@ -343,8 +339,9 @@ title:hover { /*tentar fazer cor invertida do fundo*/
     align-items: center;
     justify-content:space-around;
     gap: 50px;
-    animation: slideUpFadeIn 1s ease-in-out forwards;
-
+    animation: slideUpFadeIn ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
 }
 
 #contacts div {
@@ -375,6 +372,18 @@ footer {
     height: 10vh;
 }
 
+@keyframes slideUpFadeIn { /*entender como funciona*/
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
 @media (max-width: 400px) {
     #main-section {
         background-image: url(../images/shots/home/background-mobile.jpg);
@@ -382,5 +391,10 @@ footer {
     
     #intermediate {
         background-attachment: scroll;
+    }
+
+    #keep-in-touch-title {
+        flex-direction: column;
+        align-items: center;
     }
 }
