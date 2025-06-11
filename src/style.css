@@ -1,3 +1,12 @@
+/*
+Mexer na navbar
+Explicar as fotos da igreja
+Redimensionar as fotos
+Tornar o código semântico
+*/
+
+
+
 @font-face {
     font-family: StretchPro;
     src: url(fonts/StretchPro.otf) format('opentype');
@@ -25,6 +34,7 @@ body {
     background-color: black;
 }
 
+
 #main-section {
     height: 100vh;
     color: #010101;
@@ -43,7 +53,8 @@ body {
     align-items: center;
     width: 90vw;
     height: 10vh;
-
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 1.5s forwards;
 }
 
 a {
@@ -132,11 +143,10 @@ a {
 
 #subtitle {
     font-family: Archivo, sans-serif;
+    font-size: clamp(1.2rem, 1.25vw, 1.8rem); 
     color: #c39e6cff;
-    letter-spacing: 0.1em;
-    transition: all 0.5s ease-in-out;
-    animation: slideUpFadeIn 1s ease-in-out forwards;
-    cursor: default;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 1s forwards;
 }
 
 @keyframes slideUpFadeIn { /*entender como funciona*/
@@ -187,7 +197,9 @@ title:hover { /*tentar fazer cor invertida do fundo*/
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 60px;
+    animation: slideUpFadeIn ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
 }
 
 .block { /*mexendo nos blocos de modo geral (nos links)*/
@@ -252,6 +264,130 @@ title:hover { /*tentar fazer cor invertida do fundo*/
     letter-spacing: 0.1em;
 }
 
+#about {
+    padding-top: 60px;
+    background-color: #0A0A0A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 80px;
+}
+
+#about-title {
+    font-family: StretchPro, sans-serif;
+    color: #c39e6cff;
+    display: flex;
+    flex-wrap: wrap; /*para o responsivo*/
+    justify-content: center;
+    text-align: justify;
+    text-align-last: center;
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin: 0px 10vw 0 10vw;
+    cursor: default;
+    animation: slideUpFadeIn ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+}
+
+#about-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#about-content #about-text {
+    margin-top: 10vh;
+    width: 70vw;
+    font-family: Archivo, sans-serif;
+    font-size: clamp(1.2rem, 5vw, 1.8rem); /*valor min, ideal e máximo*/
+    color: white;
+    display: flex;
+    flex-wrap: wrap; /*para o responsivo*/
+    justify-content: center;
+}
+
+#about-content #about-text p {
+    animation: slideUpFadeIn ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+}
+
+
+#keep-in-touch {
+    background-color: #0A0A0A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 20px 20px;
+}
+
+#keep-in-touch-title {
+    font-family: StretchPro, sans-serif;
+    color: #c39e6cff;
+    display: flex;
+    flex-wrap: wrap; /*para o responsivo*/
+    justify-content: center;
+    font-size: clamp(2rem, 5vw, 3rem);
+    cursor: default;
+    animation: slideUpFadeIn ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+}
+
+span {
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+}
+
+#contacts {
+    padding: 10vh 10vw 10vh 10vw;
+    font-family: StretchPro, sans-serif;
+    color: #c39e6cff;
+    cursor: default;
+    font-size: clamp(1.2rem, 5vw, 1.8rem); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    gap: 10vh;
+    animation: slideUpFadeIn ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+}
+
+#contacts div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5vh;
+}
+
+#contacts a {
+    color: #373737;
+}
+
+#contacts a:hover {
+    color: white;
+    letter-spacing: 0.1rem;
+}
+
+#up-button {
+    color: #c39e6cff;
+    transition: all 0.25s;
+    display: inline-block;
+    margin-bottom: 5vh;
+}
+
+#up-button:hover {
+    transform: translateY(-5px);
+}
+
+
+
 footer {
     background-color: black;
     font-family: Archivo, sans-serif;
@@ -261,6 +397,27 @@ footer {
     justify-content: center;
     align-items: center;
     height: 10vh;
+}
+
+
+@keyframes slideUpFadeIn { /*entender como funciona*/
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn { 
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @media (max-width: 400px) {
