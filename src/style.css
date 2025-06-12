@@ -1,11 +1,8 @@
 /*
-Mexer na navbar
 Explicar as fotos da igreja
-Redimensionar as fotos
 Tornar o código semântico
+Ajustar a posição da seta no HTML
 */
-
-
 
 @font-face {
     font-family: StretchPro;
@@ -16,7 +13,6 @@ Tornar o código semântico
     font-family: Archivo;
     src: url(fonts/Archivo-VariableFont_wdth\,wght.ttf) format('truetype');
 }
-
 
 * {
     margin: 0px;
@@ -173,7 +169,7 @@ title:hover { /*tentar fazer cor invertida do fundo*/
     background-attachment: fixed;
 }
 
-#sections { /*mexendo na sessão*/
+#gallery-section { /*mexendo na sessão*/
     background-color: #0A0A0A;
     display: flex;
     flex-direction: column;
@@ -182,7 +178,7 @@ title:hover { /*tentar fazer cor invertida do fundo*/
     border-radius: 0 0 20px 20px;
 }
 
-#sections-title {
+#gallery-title {
     margin-top: 60px;
     margin-bottom: 40px;
     font-family: StretchPro;
@@ -205,8 +201,7 @@ title:hover { /*tentar fazer cor invertida do fundo*/
 .block { /*mexendo nos blocos de modo geral (nos links)*/
     font-family: Archivo, sans-serif;
     color: #FAFAFA;
-    font-weight: normal;
-    font-size: larger;
+    font-size: clamp(1.2rem, 5vw, 1.8rem); 
     background-color: #c39e6cff;
     display: flex;
     justify-content: center;
@@ -264,7 +259,7 @@ title:hover { /*tentar fazer cor invertida do fundo*/
     letter-spacing: 0.1em;
 }
 
-#about {
+#about-section {
     padding-top: 60px;
     background-color: #0A0A0A;
     display: flex;
