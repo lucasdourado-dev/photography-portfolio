@@ -34,7 +34,7 @@ body {
 #main-section {
     height: 100vh;
     color: #010101;
-    background-image: url(../images/shots/home/background.jpg);
+    background-image: url(../src/images/shots/home/background.jpg);
     background-size: cover;
     background-position-y: 45%;
     background-position-x: center;
@@ -163,7 +163,7 @@ title:hover { /*tentar fazer cor invertida do fundo*/
 
 #intermediate {
     height: 40vh;
-    background-image: url(../images/shots/home/intermediate-img.JPG);
+    background-image: url(../src/images/shots/home/intermediate-img.JPG);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -217,7 +217,7 @@ title:hover { /*tentar fazer cor invertida do fundo*/
 
 
 #outside{
-    background-image: url(../images/shots/home/outside-block.jpg);
+    background-image: url(../src/images/shots/home/outside-block.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -228,7 +228,7 @@ title:hover { /*tentar fazer cor invertida do fundo*/
 }
 
 #church {
-    background-image: url(../images/shots/home/church-block.jpg);
+    background-image: url(../src/images/shots/home/church-block.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -240,7 +240,7 @@ title:hover { /*tentar fazer cor invertida do fundo*/
 }
 
 #editing {
-    background-image: url(../images/shots/home/tap-to-edit-block.jpg);
+    background-image: url(../src/images/shots/home/tap-to-edit-block.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -417,7 +417,7 @@ footer {
 
 @media (max-width: 400px) {
     #main-section {
-        background-image: url(../images/shots/home/background-mobile.jpg);
+        background-image: url(../src/images/shots/home/background-mobile.jpg);
     }
     
     #intermediate {
