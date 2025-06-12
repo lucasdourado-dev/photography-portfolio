@@ -2,6 +2,8 @@
 Explicar as fotos da igreja
 Tornar o código semântico
 Ajustar a posição da seta no HTML
+Tentar fazer com que, ao passar o dedo por cima
+Indicar o botão para subir
 */
 
 @font-face {
@@ -175,7 +177,6 @@ title:hover { /*tentar fazer cor invertida do fundo*/
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 0 0 20px 20px;
 }
 
 #gallery-title {
