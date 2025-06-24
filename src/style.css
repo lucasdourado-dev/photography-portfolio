@@ -2,7 +2,6 @@
 Explicar as fotos da igreja
 Tornar o código semântico
 Ajustar a posição da seta no HTML
-Tentar fazer com que, ao passar o dedo por cima
 Indicar o botão para subir
 */
 
@@ -312,6 +311,7 @@ title:hover { /*tentar fazer cor invertida do fundo*/
 
 
 #keep-in-touch {
+    height: 90vh;
     background-color: #0A0A0A;
     display: flex;
     flex-direction: column;
