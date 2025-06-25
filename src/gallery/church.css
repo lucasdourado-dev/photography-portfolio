@@ -154,8 +154,9 @@ a {
 }
 
 #gallery {
-    max-width: 70vw;
+    max-width: 80vw;
     padding-top: 10vh;
+    padding-bottom: 10vh;
     columns: 300px;
     animation: slideUpFadeIn ease-in-out forwards;
     animation-timeline: view();
@@ -167,12 +168,19 @@ a {
     margin-bottom: 1em;
 }
 
+#up-button-container {
+    display: flex;
+    justify-content: center;
+}
+
 #up-button {
+    opacity: 0;
+    position: fixed;
     color: #c39e6cff;
     transition: all 0.25s;
     display: inline-block;
-    margin-top: 8vh;
-    margin-bottom: 5vh;
+    bottom: 10vh;
+    animation: fadeIn 1s ease-in-out 1.5s forwards;
 }
 
 #up-button:hover {
@@ -187,7 +195,7 @@ footer {
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    height: 20vh;
+    height: 10vh;
 }
 
 span {
