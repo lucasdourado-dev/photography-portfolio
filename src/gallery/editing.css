@@ -171,12 +171,14 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 10vh;
+    animation: slideUpFadeIn ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
 }
 
 #gallery img {
     margin: 0 0.6vw 1em 0.6vw;
     width: 37.8vw;
-    min-width: 288px;
 }
 
 #up-button-container {
@@ -226,6 +228,12 @@ footer {
 
 footer #footer-copy {
     color: #c39e6cff;
+}
+
+@media (max-width: 520px) {
+    #gallery img{
+        width: 80vw;
+    }
 }
 
 @keyframes slideUpFadeIn { 

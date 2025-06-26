@@ -157,7 +157,7 @@ a {
     max-width: 80vw;
     padding-top: 10vh;
     padding-bottom: 10vh;
-    columns: 300px;
+    columns: 200px;
     animation: slideUpFadeIn ease-in-out forwards;
     animation-timeline: view();
     animation-range: entry 0 cover 5%;
@@ -166,6 +166,9 @@ a {
 #gallery img {
     width: 100%;
     margin-bottom: 1em;
+    animation: slideUpFadeIn ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
 }
 
 #up-button-container {
