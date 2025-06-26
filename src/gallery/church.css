@@ -157,7 +157,7 @@ a {
     max-width: 80vw;
     padding-top: 10vh;
     padding-bottom: 10vh;
-    columns: 200px;
+    columns: 300px;
     animation: slideUpFadeIn ease-in-out forwards;
     animation-timeline: view();
     animation-range: entry 0 cover 5%;
